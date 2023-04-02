@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pointless Wars</title>
+    <style>
+        
+
+        body {
+            font-family: silkscreen;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Spacer */
+
+        .spacer {
+            height: 100px;
+        }
+
+        /* Navbar Configuration */
+
+        .navbar ul {
+            margin: auto;
+            display: block;
+            background-color: #583907;
+            list-style-type: none;
+            margin: 0;
+            overflow: hidden;
+            padding: 10;
+            border-radius: 25px;
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        .navbar a {
+            display: block;
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+        }
+
+        .inactive:hover {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        /* Image Configuration */
+
+        .Image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .logoImage img {
+            border-radius: 100px;
+            width: 550px;
+            height: 550px;
+        }
+
+        /* iframe Config */
+
+        .itchEmbed {
+            margin: auto;
+            display: block;
+        }
+
+        /* Text Configuration */
+
+        .wordDescriptions {
+            margin: auto;
+            width: 75%;
+            flex: 60%;
+            background-color: #583907;
+            font-size: 25px;
+            font-family: silkscreen;
+            border-radius: 100px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .wordTitle {
+            margin: auto;
+            width: 90%;
+            flex: 60%;
+            background-color: #583907;
+            font-size: 50px;
+            font-family: silkscreen;
+            border-radius: 100px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Button Config */
+
+        .playButton {
+            margin: auto;
+            display: flex;
+            font-size: 50px;
+            font-family: silkscreen;
+            text-decoration: none;
+            border-radius: 100px;
+            width: 50%;
+            height: 75%;
+            color:rgb(255, 255, 255);
+            background-color: #0037f7;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .playButton:hover{
+            width: 65%;
+            height: 90%;
+            font-size: 60px;
+            background-color: #111;
+        }
+
+        /* Footer Config */
+
+        .footer {
+            padding: 10px; /* Some padding */
+            text-align: center; /* Center text*/
+            background: #583907;
+        }
+
+        .footer p {
+            font-family: silkscreen;
+            color: rgb(255, 255, 255);
+        }
+
+    </style>
+    <script>
+        function LoadPage() {
+            clickSound = new sound("/SFX/click.wav")
+        }
+
+        function sound(src) {
+            this.sound = document.createElement("audio");
+            this.sound.src = src;
+            this.sound.setAttribute("preload", "auto");
+            this.sound.setAttribute("controls", "none");
+            this.sound.style.display = "none";
+            document.body.appendChild(this.sound);
+            this.play = function(){
+              this.sound.play();
+            }
+            this.stop = function(){
+              this.sound.pause();
+            }
+        } 
+
+        function buttonSFX() {
+            clickSound.Play()
+        }
+    </script>
+</head>
+
+
+
+<body onload="LoadPage()" style="background-color:#3E86A1;">
+
+    <embed src="/music/PWTheme.mp3" loop="true" autostart="true" width="2"
+         height="0">
+    
+    <div class="navbar">
+        <ul>
+            <li><a class="inactive" href="/index.html">Home</a></li>
+            <li><a class="active" href="">Pointless Wars</a></li>
+            <li><a class="inactive" href="/contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="Image">
+        <img src="images/PWThumbnail.png" alt="PWThumbnail" />
+    </div>
+
+    <div class="spacer"></div>
+
+    <div>
+        <p class="wordTitle"> A Game about Wars.... That are Pointless</p>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div>
+        <a class="playButton" href="/PWgame.html"> Click here to play now!</a>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div>
+        <p class="wordDescriptions"> Check out our itch.io page to support us!</p>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div>
+        <iframe class="itchEmbed" src="https://itch.io/embed/1892975?border_width=5&amp;bg_color=3E86A1&amp;fg_color=f4f4f4&amp;link_color=0037f7&amp;border_color=583907" width="560" height="175" frameborder="0"><a href="https://spacemendevsquad.itch.io/pointless-wars">Pointless Wars (TSA 2023) by Spacemen Dev Squad</a></iframe>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="footer">
+        <p>Copyright 2023 SpacemenDevSquad©</p>
+    </div>
+
+</body>
+</html>
