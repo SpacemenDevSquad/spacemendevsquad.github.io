@@ -4,165 +4,50 @@
     <meta charset="utf-8" />
     <link rel="icon" href="/images/icon.png">
     <title>Contact Us</title>
-    <style>
-        @font-face {
-        font-family: 'silkscreenregular';
-        src: url('/fonts/silkscreen-webfont.eot');
-        src: url('/fonts/silkscreen-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/silkscreen-webfont.woff2') format('woff2'),
-         url('/fonts/silkscreen-webfont.woff') format('woff'),
-         url('/fonts/silkscreen-webfont.ttf') format('truetype'),
-         url('/fonts/silkscreen-webfont.svg#silkscreenregular') format('svg');
-        font-weight: normal;
-        font-style: normal;
-        }
+    <!--CSS Files-->
+    <link rel="stylesheet" href="css/spacestyle.css">
 
-        body {
-            font-family: 'silkscreenregular';
-        }
+    <!--Audio/Music Files-->
+    <audio id="click">
+        <source src="SFX/click.mp3"></source>
+        <source src="SFX/click.ogg"></source>
+        Your browser isn't invited for super fun audio time.
+    </audio>
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        /* Spacer */
-
-        .spacer {
-            height: 100px;
-        }
-
-        /* Navbar Configuration */
-
-        .navbar ul {
-            background-color: rgb(42, 42, 42);
-            list-style-type: none;
-            margin: 0;
-            overflow: hidden;
-            padding: 10;
-            border-radius: 25px;
-        }
-
-        .navbar li {
-            display: inline;
-            float: left;
-        }
-
-        .navbar a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 16px 20px;
-            text-decoration: none;
-        }
-
-        .inactive:hover {
-            background-color: #111;
-        }
-
-        .active {
-            background-color: #04AA6D;
-        }
-
-        /* Image Configuration */
-
-        .logoImage {
-            display: flex;
-            justify-content: center;
-        }
-
-        .logoImage img {
-            border-radius: 100px;
-            width: 550px;
-            height: 550px;
-        }
-
-        /* Text Configuration */
-
-        .wordDescriptions {
-            margin: auto;
-            width: 75%;
-            flex: 60%;
-            background-color: rgb(55, 55, 55);
-            font-size: 25px;
-            font-family: silkscreenregular;
-            border-radius: 100px;
-            color: rgb(255, 255, 255);
-            display: flex;
-            justify-content: center;
-            padding: 40px;
-        }
-
-        .wordTitle {
-            margin: auto;
-            width: 75%;
-            flex: 60%;
-            background-color: rgb(55, 55, 55);
-            font-size: 100px;
-            font-family: silkscreenregular;
-            border-radius: 100px;
-            color: rgb(255, 255, 255);
-            display: flex;
-            justify-content: center;
-            padding: 0px;
-        }
-
-        /* Footer Config */
-
-        .footer {
-            padding: 10px; /* Some padding */
-            text-align: center; /* Center text*/
-            background: rgb(55, 55, 55); /* Grey background */
-        }
-
-        .footer p {
-            font-family: silkscreenregular;
-            color: rgb(255, 255, 255);
-        }
-
-    </style>
 </head>
 
 
 
 <body style="background-color:rgb(0, 0, 0);">
-
-    <embed src="/music/SpaceTheme.mp3" loop="true" autostart="true" width="2"
-         height="0">
     
-    <div class="navbar">
-        <ul>
-            <li><a class="inactive" href="/index.html">Home</a></li>
-            <li><a class="inactive" href="/PWPage.html">Pointless Wars</a></li>
-            <li><a class="inactive" href="/DONDPage.html">Deal or No Deal</a></li>
-            <li><a class="active" href="">Contact Us</a></li>
+    <div id="particles-js">
+        <ul id="button">
+            <li>
+                <a class="inactive" href="/index.html">Home</a>
+            </li>
+            <li>
+                <a class="inactive" href="/PWPage.html">Pointless Wars</a>
+            </li>
+            <li>
+                <a class="inactive" href="/DONDPage.html">Deal or No Deal</a>
+            </li>
+            <li>
+                <a class="active">Contact Us</a>
+            </li>
         </ul>
+        <h1 class="item1">Contact Info</h1>
+        <p class="item5">Contact us at our email: spacemendevsquad@gmail.com</p>
     </div>
-
-    <div class="spacer"></div>
-
-    <div>
-        <p class="wordTitle">
-            Contact Info
-        </p>
-    </div>
-
-    <div class="spacer"></div>
-
-    <div>
-        <p class="wordDescriptions">
-            Contact us at our email: spacemendevsquad@gmail.com
-        </p>
-    </div>
-
-    <div class="spacer"></div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
 
     <div class="footer">
         <p>Copyright 2023 SpacemenDevSquad©</p>
     </div>
+    
+    <!--Javascript Files-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="js/clickAudio.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>
