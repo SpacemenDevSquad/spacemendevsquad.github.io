@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="css/spacestyle.css">
 
     <!--Audio/Music Files-->
-    <audio id="click">
-        <source src="SFX/click.mp3"></source>
-        <source src="SFX/click.ogg"></source>
-        Your browser isn't invited for super fun audio time.
-    </audio>
     <audio autoplay loop>
 	    <source src="music/SpaceTheme.mp3"></source>
 	    Your browser isn't invited for super fun audio time.
@@ -24,19 +19,13 @@
 <body style="background-color:#000000;">
 
     <div id="particles-js">
-        <ul id="button">
-            <li>
-                <a class="active" href="">Home</a>
-            </li>
-            <li>
-                <a class="inactive" href="/PWPage.html">Pointless Wars</a>
-            </li>
-            <li>
-                <a class="inactive" href="/DONDPage.html">Deal or No Deal</a>
-            </li>
-            <li>
-                <a class="inactive" href="/contact.html">Contact Us</a>
-            </li>
+        <a href="javascript:void(0)" onclick="openNav()" class="open">☰</a>
+        <ul id="mySidenav">
+            <a  href="javascript:void(0)" onclick="closeNav()" class="close">X Close</a>
+            <li><a class="active" href="">Home</a></li>
+            <li><a class="inactive" href="/PWPage.html">Pointless Wars</a></li>
+            <li><a class="inactive" href="/DONDPage.html">Deal or No Deal</a></li>
+            <li><a class="inactive" href="/contact.html">Contact Us</a></li>
         </ul>
         <h1 class="item1">Welcome</h1>
         <img class="item2" src="images/CompanyName.png" alt="LogoImage" />
@@ -51,6 +40,7 @@
     <!--Javascript Files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/clickAudio.js"></script>
+    <script src="js/sideMenu.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
 
