@@ -44,7 +44,177 @@ canvas{
 }
 
 
-/* ---- container ---- */
+/* Fonts */
+@font-face {
+  font-family: 'silkscreenregular';
+  src: url('/fonts/silkscreen-webfont.eot');
+  src: url('/fonts/silkscreen-webfont.eot?#iefix') format('embedded-opentype'),
+   url('/fonts/silkscreen-webfont.woff2') format('woff2'),
+   url('/fonts/silkscreen-webfont.woff') format('woff'),
+   url('/fonts/silkscreen-webfont.ttf') format('truetype'),
+   url('/fonts/silkscreen-webfont.svg#silkscreenregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Div Box */
+#content{
+  width: 100%;
+  height: 2000px;
+  background-color: #000000;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Default Text Settings */
+.defaultText{
+  font-family: 'silkscreenregular';
+  position: absolute;
+  color: #ffffff;
+  margin: auto;
+  width: 50%;
+  flex: 60%;
+  border-radius: 100px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* Default List Settings */
+#content ul {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff588;
+  overflow-x: hidden; 
+  padding-top: 60px;
+  transition: 0.3s;
+}
+
+#content li {
+  display: block;
+  float: none;
+}
+
+/* Default Image Settings */
+#content img {
+  position: absolute;
+  border-radius: 7.5vw;
+  width: 60vw;
+  height: 35vw;
+  pointer-events: none;
+}
+
+/* Default Button Settings */
+#content a {
+  font-family: 'silkscreenregular';
+  display: block;
+  text-align: center;
+  padding: 16px 20px;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+/* Game Play Button */
+.playButton {
+  font-size: 3vw;
+  position: absolute;
+  margin: auto;
+  display: flex;
+  text-decoration: none;
+  border-radius: 100px;
+  background-color: #fff588;
+  justify-content: center;
+  padding: 0.5vw;
+  color: black;
+}
+.playButton:hover{
+  font-size: 3.5vw;
+  color: white;
+  background-color: #111;
+}
+
+/* Open & Close Buttons */
+.open {
+  color: #ffffff;
+  background-color: #2d2d2d;
+  border-radius: 100px;
+  width: 100;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  transition: 0.2s;
+}
+.open:hover {
+  background-color: #111;
+  font-size: 50px;
+  top: 15px;
+  left: 15px;
+}
+
+.close {
+  color: black;
+  font-size: 15px;
+}
+
+.close:hover {
+  background-color: #111;
+  color: white;
+  font-size: 20px;
+}
+
+
+/* Inactive/Active Buttons */
+
+.inactive {
+  color: black;
+  font-size: 15px;
+}
+
+.inactive:hover {
+  background-color: #111;
+  color: white;
+  font-size: 20px;
+}
+
+.active {
+  color: white;
+  font-size: 15px;
+  background-color: black;
+  pointer-events: none;
+}
+
+/* itch.io iframe config */
+.itchEmbed {
+  margin: auto;
+  display: flex;
+  position: absolute;
+  width: 60vw;
+}
+
+/* Footer Config */
+
+.footer {
+  padding: 1vw;
+  text-align: center;
+  background: #fff588;
+  font-family: silkscreenregular;
+  color: black;
+  font-size: 1vw;
+  pointer-events: none;
+}
+
+/*
 @font-face {
   font-family: 'silkscreenregular';
   src: url('/fonts/silkscreen-webfont.eot');
@@ -127,16 +297,16 @@ canvas{
 }
 @media screen and (max-width: 650px) {
   #content ul {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%; /* 100% Full-height HI
+    width: 0; /* 0 width - change this with JavaScript  
+    position: fixed; /* Stay in place  
+    z-index: 1; /* Stay on top  
+    top: 0; /* Stay at the top  
     left: 0;
     background-color: #fff588;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden; /* Disable horizontal scroll  
+    padding-top: 60px; /* Place content 60px from the top  
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav  
   }
   #content li {
     display: block;
@@ -187,7 +357,7 @@ body {
   font-family: 'silkscreenregular';
 }
 
-/* Button Config */
+/* Button Config  
 
 .playButton {
   top: calc(75.0px + 63vw);
@@ -220,7 +390,7 @@ body {
   pointer-events: none;
 }
 
-/* iframe Config */
+/* iframe Config  
 
 .itchEmbed {
   margin: auto;
@@ -230,7 +400,7 @@ body {
   top: calc(75.0px + 90vw);
 }
 
-/* Footer Config */
+/* Footer Config  
 
 .footer {
   padding: 1vw;
@@ -241,3 +411,4 @@ body {
   font-size: 1vw;
   pointer-events: none;
 }
+*/

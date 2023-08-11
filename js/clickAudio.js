@@ -13,3 +13,9 @@ $(".playButton").mouseenter(function() {
     clickSound.src = "SFX/click.mp3"
     clickSound.play();
 });
+
+$(".close").mouseenter(function() {
+    var clickSound = new Audio()
+    clickSound.src = "SFX/click.mp3"
+    clickSound.play();
+});
